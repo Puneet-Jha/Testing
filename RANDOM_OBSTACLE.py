@@ -9,7 +9,7 @@ class ObstacleAvoider:
         self.distance = float("inf")
 
     def get_sensor_reading(self):
-        """Simulate a distance sensor (replace with real hardware code)."""
+        # simulating a distance sensor which can be replaced by real readings
         # Randomly simulate obstacle detection
         return random.uniform(0.5, 7.0)
 
