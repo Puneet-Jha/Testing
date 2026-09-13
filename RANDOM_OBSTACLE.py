@@ -2,7 +2,7 @@ import time
 import random
 
 class ObstacleAvoider:
-    def __init__(self, stop_distance=0.5, forward_speed=0.2, turn_speed=0.8):
+    def __init__(self, stop_distance=0.5, forward_speed=2.0, turn_speed=1.0):
         self.stop_distance = stop_distance
         self.forward_speed = forward_speed
         self.turn_speed = turn_speed
@@ -11,7 +11,7 @@ class ObstacleAvoider:
     def get_sensor_reading(self):
         """Simulate a distance sensor (replace with real hardware code)."""
         # Randomly simulate obstacle detection
-        return random.uniform(0.2, 2.0)
+        return random.uniform(0.5, 7.0)
 
     def stop_robot(self):
         print("STOP: Motors off")
@@ -30,7 +30,7 @@ class ObstacleAvoider:
 
             if self.distance <= self.stop_distance:
                 self.stop_robot()
-                time.sleep(0.2)
+                time.sleep(1)
                 self.turn_robot()
             else:
                 self.move_forward()
